@@ -121,7 +121,7 @@ while True:
                 keypress = "space"
             elif right_of(p14, p12) and close(p23, p24):
                 detected = "CW SPIN"
-                keypress = "x"
+                keypress = "up"
             elif left_of(p13, p11) and close(p23, p24):
                 detected = "CCW SPIN"
                 keypress = "z"

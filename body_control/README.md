@@ -57,15 +57,17 @@ curl -o pose_landmarker_lite.task \
 
 ## Usage
 
-1. Open your Tetris game and make sure its window is focused/active.
-2. Run the script:
+1. Open `https://jstris.jezevec10.com/?play=1&mode=2` in a browser your Tetris game and make sure its window is focused/active.
+2. Under settings > 'Game settings' > 'Soft-drop', select 'Slow'. Then Save Settings & Close 
+![alt text](image.png)
+3. Run the script:
 
 ```bash
-python tetris_pose.py
+python main.py
 ```
 
-3. A webcam window labelled **"Pose"** will open. Stand back far enough that your upper body and hips are visible.
-4. Press **`Q`** to quit.
+4. A webcam window labelled **"Pose"** will open. Stand back far enough that your upper body and hips are visible.
+5. Press **`Q`** to quit.
 
 ## Configuration
 
