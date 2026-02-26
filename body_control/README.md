@@ -6,14 +6,14 @@ Play Tetris using your body! This script uses your webcam and MediaPipe pose det
 
 | Movement | Key | Adjustable Constant |
 |---|---|---|
-| Drop shoulders quickly | `Space` (hard drop) | `HARD_DROP_THRESHOLD` |
-| Raise arms + drop hips | `↓` hold (soft drop start) | `SOFT_DROP_THRESHOLD` |
-| Rise hips back up | `↓` release (soft drop end) | `RISE_THRESHOLD` |
-| Extend right elbow out | `X` (rotate clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
-| Extend left elbow out | `Z` (rotate counter-clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
-| Raise left arm higher | `←` (move left) | `HIGH_THRESHOLD` |
-| Raise right arm higher | `→` (move right) | `HIGH_THRESHOLD` |
-| Bring both hands above head | `C` (hold piece) | `CLOSE_THRESHOLD` |
+| Drop shoulders quickly | `Space key` (hard drop) | `HARD_DROP_THRESHOLD` |
+| Raise arms + drop hips | `↓ key` hold (soft drop start) | `SOFT_DROP_THRESHOLD` |
+| Rise hips back up | `↓ key` release (soft drop end) | `RISE_THRESHOLD` |
+| Extend right elbow out | `X key` (rotate clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
+| Extend left elbow out | `up key` (rotate counter-clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
+| Raise left arm higher | `← key` (move left) | `HIGH_THRESHOLD` |
+| Raise right arm higher | `→ key` (move right) | `HIGH_THRESHOLD` |
+| Bring both hands above head | `C key` (hold piece) | `CLOSE_THRESHOLD` |
 
 ## Requirements
 
