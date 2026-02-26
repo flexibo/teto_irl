@@ -4,16 +4,16 @@ Play Tetris using your body! This script uses your webcam and MediaPipe pose det
 
 ## Controls
 
-| Movement | Action |
-|---|---|
-| Drop shoulders quickly | Hard drop (Space) |
-| Raise arms + drop hips | Soft drop start (hold ↓) |
-| Rise hips back up | Soft drop end (release ↓) |
-| Extend right elbow out | Rotate clockwise (X) |
-| Extend left elbow out | Rotate counter-clockwise (Z) |
-| Raise left arm higher | Move left (←) |
-| Raise right arm higher | Move right (→) |
-| Bring both hands above head | Hold piece (C) |
+| Movement | Key | Adjustable Constant |
+|---|---|---|
+| Drop shoulders quickly | `Space` (hard drop) | `HARD_DROP_THRESHOLD` |
+| Raise arms + drop hips | `↓` hold (soft drop start) | `SOFT_DROP_THRESHOLD` |
+| Rise hips back up | `↓` release (soft drop end) | `RISE_THRESHOLD` |
+| Extend right elbow out | `X` (rotate clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
+| Extend left elbow out | `Z` (rotate counter-clockwise) | `HORIZONTAL_THRESHOLD`, `CLOSE_THRESHOLD` |
+| Raise left arm higher | `←` (move left) | `HIGH_THRESHOLD` |
+| Raise right arm higher | `→` (move right) | `HIGH_THRESHOLD` |
+| Bring both hands above head | `C` (hold piece) | `CLOSE_THRESHOLD` |
 
 ## Requirements
 
@@ -57,8 +57,8 @@ curl -o pose_landmarker_lite.task \
 
 ## Usage
 
-1. Open `https://jstris.jezevec10.com/?play=1&mode=2` in a browser your Tetris game and make sure its window is focused/active.
-2. Under settings > 'Game settings' > 'Soft-drop', select 'Slow'. Then Save Settings & Close 
+1. Open `https://jstris.jezevec10.com/?play=1&mode=2` in a browser and make sure its window is focused/active.
+2. Under settings > 'Game settings' > 'Soft-drop', select 'Slow'. Then Save Settings & Close.
 ![alt text](image.png)
 3. Run the script:
 
@@ -78,9 +78,9 @@ At the top of the script you can tweak these constants:
 | `HARD_DROP_THRESHOLD` | `0.07` | How far shoulders must drop to trigger hard drop |
 | `SOFT_DROP_THRESHOLD` | `0.07` | How far hips must drop to trigger soft drop |
 | `RISE_THRESHOLD` | `0.07` | How far hips must rise to end soft drop |
-| `CLOSE_THRESHOLD` | `0.05` | Proximity threshold for "hands together" |
-| `HIGH_THRESHOLD` | `0.07` | How much higher one landmark must be than another |
-| `HORIZONTAL_THRESHOLD` | `0.05` | Horizontal distance for elbow-out detection |
+| `CLOSE_THRESHOLD` | `0.05` | Proximity threshold for "hands together" (hold) and "hips together" (spin) |
+| `HIGH_THRESHOLD` | `0.07` | How much higher one landmark must be than another (move left/right) |
+| `HORIZONTAL_THRESHOLD` | `0.05` | Horizontal distance for elbow-out detection (spin) |
 | `PROCESS_EVERY` | `10` | Process every Nth frame (lower = more responsive, higher CPU) |
 | `DEBUG` | `False` | Show debug overlay with live landmark values |
 
